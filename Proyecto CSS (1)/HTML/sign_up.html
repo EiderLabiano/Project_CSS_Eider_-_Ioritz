@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+    
+    body{
+            background-image: url(/Images/background_prairie_pokemon_screencapture_by_nemotrex_de8nlib-fullview.jpg);
+            background-repeat: no-repeat;
+            color: #FFFFFF;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0%;
+        }
+
+        div#header {
+            position: sticky;
+            top: 0;
+        }
+
+        div.TopRectangle {
+            height: 115px;
+            background-color: red;
+            border: 15px solid black;
+            position: relative;
+            
+        }
+        
+        div.TopCircle {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            background-color: white;
+            border: 15px solid black;
+
+            position: absolute;
+            z-index: 101;
+
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);           
+        }
+
+        label.TopSmallCircle {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background-color: white;
+            border: 5px solid black;
+
+            position: absolute;
+            z-index: 102;
+
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+
+        div.bottomCircle {
+            width: 150px;
+            height: 75px; 
+            background-color: lightgray;
+            border: 15px solid black;
+            border-top-left-radius: 120px;  
+            border-top-right-radius: 120px; 
+            border-bottom: 0;
+            rotate: 180deg;
+            position: absolute;
+            z-index: 50;
+            right: 50%;
+            transform: translate(-50%);
+            z-index: 101;
+        }
+
+        div.bottomRectangle {
+            height: 115px;
+            background-color: white;
+            border: 15px solid black;
+            position: relative;
+            margin: 0%;
+        }  
+
+        /*css de las páginas generales*/
+
+        div.log_in{
+            height: 70%;
+            width: 40%;
+            background-image: linear-gradient(lightblue, lightblue, lightgreen);
+            border: 10px solid black;
+            padding: 10%;
+            margin: auto;
+            color: black;
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+        div.title{
+            text-align: center;
+        }
+
+        </style>
+</head>
+<body>
+        <div class="TopRectangle" id="header">
+
+            <div class="TopCircle" ></div>
+            <label for="toggle" class="TopSmallCircle"></label>
+    
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <form action="index.html">
+            <div class="log_in">
+                <div class="title">
+                    <h1><big><i><u>Sign Up</u></i></big></h1>
+                </div>
+                <br>
+                <div>
+                    <label for=""><big><b>Name*:</b></big></label>
+                    <input type="text" required>
+                </div>
+                <br>
+                <div>
+                    <label for=""><big><b>Surname*:</b></big></label>
+                    <input type="text" required>
+                </div>
+                <br>
+                <div>
+                    <label for=""><big><b>Username*:</b></big></label>
+                    <input type="text" required>
+                </div>
+                <br>
+                <div>
+                    <label for="password"><big><b>Password*:</b></big></label>
+                    <input type="password" required>
+                </div>
+                <br>
+                <div>
+                    <label for=""><b><big>Birth date*</big></b></label>
+                    <input type="date" required>
+                </div>
+                <div></div>
+                <br>
+                <div>
+                    <label for=""><b><u>Choose your Pokemon traveler (just one) </u></b></label>
+                    <br>
+                    <table>
+                        <tr>
+                            <th><img src="/Images/Bulbasaur.png" width="80px"></th>
+                            <th><img src="/Images/800px-Charmander.png" width="80"></th>
+                            <th><img src="/Images/Squirtle.png" width="80px"></th>
+                        </tr>
+                        <tr>
+                            <th><input type="radio"></th>
+                            <th><input type="radio"></th>
+                            <th><input type="radio"></th>
+                        </tr>
+                    </table>
+                </div>
+                <br><br>
+                <input type="submit" value="Sign Up">
+            </div>
+    </form>
+    
+    
+    
+    <p>A</p>
+    <p>A</p>
+    <div class="bottomCircle"></div>
+    <div class="bottomRectangle"></div>
+</body>
+</html>
