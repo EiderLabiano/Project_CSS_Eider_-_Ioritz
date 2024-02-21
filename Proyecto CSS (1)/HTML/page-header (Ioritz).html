@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokeblog Comon elements</title>
+    <link rel="stylesheet" href="../CSS/CommonCSS.css">
     <link rel="icon" type="image/x-icon" href="../IMAGES/favicon.png">
 
-    <style>  
-    /* This dammed document is running on fucking hopes and dreams, I can fucking take it anymore*/
-    /* TODO: Media Query and fotter links*/    
-    
-    body{
-            margin:0%;
-            background-image: url(../IMAGES/background.jpg);
+    <style>
+        /* TODO: Media Query and fotter links*/
+
+        body {
+            margin: 0%;
+            background-image: url(../images/common/background.jpg);
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
+
+        /* Header */
 
         div#header {
             position: sticky;
@@ -28,9 +32,9 @@
             background-color: red;
             border: 15px solid black;
             position: relative;
-            
+
         }
-        
+
         div.TopCircle {
             width: 125px;
             height: 125px;
@@ -43,7 +47,7 @@
 
             top: 100%;
             left: 50%;
-            transform: translate(-50%, -50%);           
+            transform: translate(-50%, -50%);
         }
 
         label.TopSmallCircle {
@@ -59,22 +63,32 @@
             top: 100%;
             left: 50%;
             transform: translate(-50%, -50%);
-            
+
         }
 
-        label.TopSmallCircle:hover{
+        label.TopSmallCircle:hover {
             animation-name: menuButtonHover;
             animation-duration: 0.1s;
             animation-fill-mode: forwards;
         }
 
         @keyframes menuButtonHover {
-            0% {width: 75px; height: 75px;}
-            100% {width: 90px; height: 90px;}
+            0% {
+                width: 75px;
+                height: 75px;
+            }
+
+            100% {
+                width: 90px;
+                height: 90px;
+            }
         }
 
-        div.Menu{
-            background-color: gray;
+        /* Menu */
+
+        div.Menu {
+            background-color: #e0e0e0;
+            background-image: linear-gradient(#e0e0e0, #969799, #e0e0e0);
             border: 5px solid black;
             border-radius: 5%;
             opacity: 0%;
@@ -82,60 +96,78 @@
             position: absolute;
             z-index: -10;
             display: flex;
-            
+
             left: 50%;
             transform: translate(-50%, -50%);
         }
 
-        #toggle:checked ~ div.Menu{
+        #toggle:checked~div.Menu {
             animation-name: menuAnimation;
             animation-duration: 0.2s;
-            animation-fill-mode: forwards;  
+            animation-fill-mode: forwards;
         }
 
-        @keyframes menuAnimation{
-            0% {top: 0%; opacity: 0%;}
-            50% {opacity: 50%;}
-            100% {top: 155%; opacity: 100%;}
+        @keyframes menuAnimation {
+            0% {
+                top: 0%;
+                opacity: 0%;
+            }
+
+            50% {
+                opacity: 50%;
+            }
+
+            100% {
+                top: 155%;
+                opacity: 100%;
+            }
         }
 
         .visually-hidden {
             opacity: 0%;
             position: absolute;
         }
-        
 
-        .searchbar{
+        /* SearchBar */
+
+        .searchbar {
             height: 50px;
             width: 20%;
             background-color: aqua;
             float: right;
-            
+
             border: 5px solid black;
-            
+
             margin: 5px;
 
             display: flex;
-            
+
             align-items: center;
             font-size: 27px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
         }
 
-        .searchButton{
-            height: 62px;
-            width: 61px;
-            background-color: aqua;
+        .searchButton {
+            height: 50px;
+            width: 50px;
+            background-color: lightgray;
             float: right;
             position: relative;
             right: 10px;
-            
+
             border: 5px solid black;
-            
-            margin: 5px;
+            border-radius: 30%;
+
+            margin: 10px;
         }
 
-        .button{
+        .searchButton:hover {
+            background-color: rgb(170, 165, 165);
+        }
+
+        /* Link Buttons */
+
+        .button {
             width: 100px;
             height: 50px;
             background-color: gray;
@@ -144,20 +176,19 @@
             text-align: center;
             float: right;
             margin: 5px;
-            
+
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 27px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 
             z-index: 101;
         }
 
-        .button2{
+        .menuButtons {
             width: 100px;
             height: 50px;
-            background-color: gray;
             border: 5px solid black;
             border-radius: 10%;
             text-align: center;
@@ -165,41 +196,37 @@
             float: right;
             margin: 20px;
             position: relative;
-            
+
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 27px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 
             z-index: 101;
         }
 
-        .button:hover,.button2:hover{
-            animation-name: buttonHover;
-            animation-duration: 0s;
-            animation-fill-mode: forwards;
+        .button:hover,
+        .menuButtons:hover {
+            background-color: lightgray;
         }
 
-        @keyframes buttonHover{
-            0% {}
-            100% {background-color: lightgray;}
-        }
+        /* Footer */
 
         div.bottomCircle {
             width: 150px;
-            height: 75px; 
+            height: 75px;
             background-color: lightgray;
             border: 15px solid black;
-            border-top-left-radius: 120px;  
-            border-top-right-radius: 120px; 
+            border-top-left-radius: 120px;
+            border-top-right-radius: 120px;
             border-bottom: 0;
             rotate: 180deg;
             position: absolute;
             z-index: 50;
             right: 50%;
             transform: translate(-50%);
-            z-index: 50;
+            z-index: 101;
         }
 
         div.bottomRectangle {
@@ -207,40 +234,97 @@
             background-color: white;
             border: 15px solid black;
             position: relative;
-            z-index: 49;
-        }  
+            z-index: 100;
+        }
+
+        /* Social Media Links*/
+
+        .socialLinks {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+
+        .socialGrid {
+            width: 300px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            float: right;
+            padding: 15px;
+        }
+
+        .socialGrid>div {
+            position: relative;
+            text-align: center;
+            font-size: 30px;
+
+        }
+
+        .item1 {
+            grid-column: 1 / 4;
+        }
+
+        .image {
+            width: 80%;
+        }
+
+
+        .helpLinks {
+
+            float: right;
+
+            border-left: 2px solid black;
+            padding: 15px;
+            padding-left: 1%;
+            padding-right: 3%;
+        }
+
+        .helpLinks p {
+            margin: 10px;
+        }
+
+        .logo {
+            float: left;
+            padding: 15px;
+            margin: 10px;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="TopRectangle" id="header">
-        <img src="../IMAGES/logo.png" height="100px" style="position: absolute; margin: 10px;"></img>
+        <img src="../images/common/logo.png" height="100px" style="position: absolute; margin: 10px;"></img>
 
-        <div class="TopCircle" ></div>
-        
+        <div class="TopCircle"></div>
+
         <input type="checkbox" id="toggle" class="visually-hidden">
         <label for="toggle" class="TopSmallCircle"></label>
-    
+
         <div>
-            
-            <div class="button" >Sign Up</div>
-            <div class="button" >Log In</div>
+            <div style="width: 20%; float: right;">
+                <div class="button">Sign Up</div>
+                <div class="button">Log In</div>
+            </div>
+
             <form action="/search.html">
-                
-                <button type="submit" class="searchButton"></button>
+                <button type="submit" class="searchButton"><img src="../images/common/lupa.png"
+                        style="height: 30px;"></img></button>
                 <input type="text" placeholder="Search.." name="search" class="searchbar">
             </form>
-            
         </div>
 
         <div class="Menu">
-            <div class="button2" >News</div>
-            <div class="button2" >Profile</div>
-            <div class="button2" style="opacity: 0%;">Sign Up</div>
-            <div class="button2" >Sign Up</div>
-            <div class="button2" >text</div>
-        </div>  
+            <div class="menuButtons" style="background-image: linear-gradient(red, red,  #a82f14);">News</div>
+            <div class="menuButtons" style="background-image: linear-gradient(#61a93b, #61a93b,  #4c713b);">Profile
+            </div>
+            <div class="menuButtons" style="opacity: 0%;">Nothing on here, hehe</div>
+            <div class="menuButtons" style="background-image: linear-gradient(#e09829, #e09829,  #8c663f);">Pokedex
+            </div>
+            <div class="menuButtons" style="background-image: linear-gradient(#2491ca, #2491ca,  #425772);">Oficial Site
+            </div>
+        </div>
 
     </div>
 
@@ -253,11 +337,11 @@
     <p>A</p>
     <p>A</p>
     <p>A</p>
-    
     <p>A</p>
     <p>A</p>
     <p>A</p>
     <p>A</p>
+
     <p>A</p>
     <p>A</p>
     <p>A</p>
@@ -269,12 +353,27 @@
     <p>A</p>
     <p>A</p>
 
-    
- 
     <div class="bottomCircle"></div>
     <div class="bottomRectangle">
-        
+        <img src="../images/common/logo.png" height="100px" class="logo"></img>
+        <div class="helpLinks">
+            <p>About PokéBlog</p>
+            <p>FAQ</p>
+            <p>Terms and Conditions</p>
+            <p>Contact us</p>
+        </div>
+        <div class="socialGrid">
+            <div class="item1">Social Media Links:</div>
+            <div class="item2"><a href="https://www.facebook.com/"><img src="../images/common/facebook.png"
+                        class="image"></img></a></div>
+            <div class="item3"><a href="https://www.instagram.com/"><img src="../images/common/instagram.png"
+                        class="image"></img></a></div>
+            <div class="item4"><a href="https://twitter.com/"><img src="../images/common/twitter.png"
+                        class="image"></img></a></div>
+        </div>
+
     </div>
-    
+
 </body>
+
 </html>
