@@ -18,6 +18,10 @@ div#header {
     z-index: 100;
 }
 
+a{
+    text-decoration: none;
+}
+
 div.TopRectangle {
     height: 100px;
     border: 10px solid black;

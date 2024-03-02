@@ -8,6 +8,10 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
 
+a{
+    text-decoration: none;
+}
+
 /* Header */
 /* Header */
 /* Header */
@@ -15,6 +19,7 @@ body {
 div#header {
     position: sticky;
     top: 0px;
+    z-index: 100;
 }
 
 div.TopRectangle {
