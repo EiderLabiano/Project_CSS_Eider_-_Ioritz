@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokeblog Comon elements</title>
+    <link rel="stylesheet" href="../CSS/CommonCSS.css">
+    <link rel="icon" type="image/x-icon" href="../images/common/favicon.png">
+
+    <style>
+
+        /* TODO: Tablet layout and general adjusting */
+
+        body {
+            margin: 0%;
+            background-image: url(../images/common/background.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        } 
+
+        /* Header */
+        /* Header */
+        /* Header */
+
+        div#header {
+            position: sticky;
+            top: 0px;
+        }
+
+        div.TopRectangle {
+            height: 100px;
+            border: 10px solid black;
+
+            background-color: red;
+            position: absolute;
+        }
+
+        div.TopCircle {
+            width: 75px;
+            height: 75px;
+            border: 6px solid black;
+
+            border-radius: 50%;
+            background-color: white;
+            
+            position: absolute;
+            z-index: 101;
+
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        label.TopSmallCircle {
+            width: 45px;
+            height: 45px;
+            border: 3px solid black;
+
+            border-radius: 50%;
+            background-color: white;
+
+            position: absolute;
+            z-index: 102;
+
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        label.TopSmallCircle:hover {
+            animation-name: null;
+        }
+
+        @keyframes menuButtonHover {
+            0% {
+                width: 75px;
+                height: 75px;
+            }
+
+            100% {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        /* Menu */
+        /* Menu */
+        /* Menu */
+
+        div.Menu {
+            background-color: #e0e0e0;
+            background-image: linear-gradient(#e0e0e0, #969799, #e0e0e0);
+            border: 5px solid black;
+            border-radius: 9px;
+            opacity: 0%;
+
+            position: absolute;
+            z-index: -10;
+            display: flex;
+
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #toggle:checked~div.Menu {
+            animation-name: menuAnimation;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes menuAnimation {
+            0% {
+                top: 0%;
+                opacity: 0%;
+            }
+
+            50% {
+                opacity: 50%;
+            }
+
+            100% {
+                top: 165%;
+                opacity: 100%;
+            }
+        }
+
+        .visually-hidden {
+            opacity: 0%;
+            position: absolute;
+        }
+
+        /* SearchBar */
+        /* SearchBar */
+        /* SearchBar */
+
+        .searchbar {
+            height: 30px;
+            width: 40%;
+            font-size: 20px;
+            border: 3px solid black;
+
+            background-color: rgb(241, 241, 241);
+            float: right;
+
+            border-radius: 10px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            
+
+        }
+
+        .searchButton {
+            position: absolute;
+            opacity: 0%;
+        }
+
+        .searchButton:hover {
+            background-color: rgb(170, 165, 165);
+        }
+
+        /* Link Buttons */
+        /* Link Buttons */
+        /* Link Buttons */
+
+        .button {
+            width: 15%;
+            height: 30px;
+            border: 3px solid black;
+            font-size: 16px;
+
+            background-color: rgb(156, 156, 156);
+            border-radius: 10px;
+            text-align: center;
+            float: right;
+            margin: 5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+
+            z-index: 101;
+        }
+
+        .menuButtons {
+            width: 45px;
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 35px;
+            border: 3px solid black;         
+            margin: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 15px;
+
+            border-radius: 10px;
+            text-align: center;
+            bottom: 100%;
+            float: right;
+            
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+
+            z-index: 101;
+        }
+
+        .menuButtons:nth-child(3) {
+            margin: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 5px;
+            position: absolute;
+        }
+
+        .button:hover,
+        .menuButtons:hover {
+            background-color: lightgray;
+        }
+
+        /* Footer */
+        /* Footer */
+        /* Footer */
+
+        div.bottomCircle {
+            width: 75px;
+            height: 37.5px;
+            border: 10px solid black;
+            
+            background-color: lightgray;
+            border-top-left-radius: 120px;
+            border-top-right-radius: 120px;
+            border-bottom: 0;
+            rotate: 180deg;
+            position: absolute;
+            z-index: 50;
+            right: 50%;
+            transform: translate(-50%);
+            z-index: 101;
+        }
+
+        div.bottomRectangle {
+            height: 100px;
+            border: 10px solid black;  
+         
+            background-color: white;
+            position: relative;
+
+            z-index: 100;
+            bottom: 0px;
+        }
+
+        img.bottomLogo {
+            max-height: 40px;
+            position: absolute;
+            top: 10%;
+            left: 7%;
+            transform: translate(+0%, -0%);
+        }
+
+        /* Social Media Links*/
+        /* Social Media Links*/
+        /* Social Media Links*/
+
+        
+
+        .socialGrid {
+            width: 30%;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            position: absolute;
+            left: 5%;
+            bottom: 5px;  
+        }
+
+        .image {
+            max-width: 35px;
+        }
+
+        .helpLinks {
+            float: right;
+            border-left: 0px solid black;
+            padding: 15px;
+            padding-left: 1%;
+            padding-right: 3%;
+            text-align: right;
+        }
+
+        .helpLinks p {
+            margin: 1px;
+            font-size: 15px;
+        }
+
+        /* Test*/
+
+        @keyframes null {
+            
+        }
+
+        .topButtonContainer{  
+            float: right;
+            width: 80%;
+            border: 5px solid black;
+        }
+
+        .clearfloat{
+            clear: both;
+        }
+
+        img.topLogo {
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            transform: translate(+5%, -70%); 
+        }
+
+        /* Tablet */
+
+        @media only screen and (min-width: 600px) {
+            
+
+            img.topLogo{
+                
+                height: 70px;
+                
+                transform: translate(+5%, -50%);
+            }
+
+            div.TopCircle {
+                width: 100px;
+                height: 100px;
+                border: 9px solid black;
+            }
+
+            label.TopSmallCircle {
+                width: 65px;
+                height: 65px;
+                border: 4px solid black;
+            }
+
+            .menuButtons:nth-child(3) {
+                position: relative;
+                width: 45px;
+            }
+
+            div.bottomCircle {
+                width: 100px;
+                height: 50px;
+            }
+
+            .socialGrid {
+                width: 100%;
+                justify-content: center;
+                gap: 1%;
+                left: 0%;
+                bottom: 2px;   
+            }
+
+            .image {
+                max-width: 40px;
+            }
+
+            img.bottomLogo {
+                max-height: 80px;
+                left: 0%;
+                top: 50%;
+                transform: translate(+5%, -50%);
+            }
+
+        }
+
+
+        /* Desktop */
+
+        @media only screen and (min-width: 1324px) {
+            div.TopRectangle {
+                height: 100px;
+                border: 10px solid black;
+            }
+
+            img.topLogo{
+                height: 80px;
+                
+                transform: translate(+5%, -50%);
+            }
+
+            div.TopCircle {
+                width: 125px;
+                height: 125px;
+                border: 10px solid black;
+            }
+
+            label.TopSmallCircle {
+                width: 75px;
+                height: 75px;
+                border: 5px solid black;
+            }
+
+            label.TopSmallCircle:hover {
+                animation-name: menuButtonHover;
+                animation-duration: 0.1s;
+                animation-fill-mode: forwards;
+            }
+
+            .button {
+                width: 100px;
+                height: 50px;
+                border: 4px solid black;
+                font-size: 27px;
+            }
+
+            .searchButton {
+                height: 50px;
+                width: 50px;
+                background-color: lightgray;
+                float: right;
+                position: relative;
+                right: 10px;
+                opacity: 100%;
+
+                border: 4px solid black;
+                border-radius: 30%;
+
+                margin: 8px;
+            }
+
+            .searchbar {
+                height: 48px;
+                width: 20%;
+                font-size: 27px;
+                border: 4px solid black;
+            }
+
+            .clearfloat{
+                display: none;
+            }
+
+            .menuButtons {
+                width: 100px;
+                height: 50px;
+                border: 5px solid black;
+                margin: 20px;
+                font-size: 27px;
+            }
+
+            .menuButtons:nth-child(3) {
+                position: relative;
+                width: 100px;
+                height: 50px;
+                border: 5px solid black;
+                margin: 20px;
+                font-size: 27px;
+            }
+
+            @keyframes menuAnimation {
+                0% {
+                    top: 0%;
+                    opacity: 0%;
+                }
+
+                50% {
+                    opacity: 50%;
+                }
+
+                100% {
+                    top: 165%;
+                    opacity: 100%;
+                }
+            }
+
+            div.bottomCircle {
+                width: 150px;
+                height: 75px;
+                border: 10px solid black;
+                border-bottom: 0;
+            }
+
+            div.bottomRectangle {
+                height: 125px;
+                border: 10px solid black;
+            }
+            
+            img.bottomLogo {
+                max-height: 100px;
+                left: 0%;
+                top: 50%;
+                transform: translate(+5%, -50%);
+            }
+
+            .helpLinks {
+                padding: 15px;
+                padding-left: 1%;
+                padding-right: 3%;
+            }
+
+            .helpLinks p {
+                margin: 6px;
+            }
+
+            .image {  
+                max-width: 70px;
+            }
+
+            .socialGrid {
+                justify-content:unset;
+                width: 300px;
+                display: grid;
+                position: relative;
+                gap: 10px;
+                float: right;
+                padding: 15px;
+                bottom: -10px;
+                padding-right: 3%;
+            }
+
+        }
+
+        
+
+        
+      
+    </style>
+</head>
+
+<body>
+
+    <div class="TopRectangle" id="header">
+        <a href="index.html">
+            <img src="../images/common/logo.png" class="topLogo"></img>
+        </a>
+
+        <div class="TopCircle"></div>
+
+        <input type="checkbox" id="toggle" class="visually-hidden">
+        <label for="toggle" class="TopSmallCircle"></label>
+
+            <form action="404.html">
+                <button type="submit" class="searchButton">
+                    <img src="../images/common/lupa.png" style="height: 30px;"></img>
+                </button>
+                <input type="text" placeholder="Search..." name="search" class="searchbar">
+            </form>
+            <div class="clearfloat"></div>
+            <div>
+                <div class="button">
+                    <a href="sign_up.html" style="color: black;">Sign Up</a>
+                </div>
+                <div class="button">
+                    <a href="log_in.html" style="color: black;">Log In</a>
+                </div>
+            </div>
+            
+
+        <div class="Menu">
+            <div class="menuButtons" style="background-image: linear-gradient(red, red,  #a82f14);">
+                <a href="news.html" style="color: black;">News</a>
+            </div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#61a93b, #61a93b,  #4c713b);">
+                <a href="profile.html" style="color: black;">Profile</a>
+            </div>
+
+            <div class="menuButtons" style="opacity: 0%;">Nothing on here, hehe</div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#e09829, #e09829,  #8c663f);">
+                <a href="pokedex.html" style="color: black;">Pokédex</a>
+            </div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#2491ca, #2491ca,  #425772);">
+                <a href="https://www.pokemon.com" style="color: black;">Oficial Site</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+    <p>A</p>
+
+
+
+    <div class="bottomCircle"></div>
+
+    <div class="bottomRectangle">
+
+        <a href="index.html">
+            <img src="../images/common/logo.png" class="bottomLogo"></img>
+        </a>
+
+        <div class="helpLinks">
+            <p><a href="about.html" style="color: black;">About PokéBlog</a></p>
+            <p><a href="faq.html" style="color: black;">FAQ</a></p>
+            <p><a href="terms.html" style="color: black;">Terms and Conditions</a></p>
+            <p><a href="contact.html" style="color: black;">Contact us</a></p>
+        </div>
+
+        <div class="socialGrid">
+
+            <div class="item2">
+                <a href="https://www.facebook.com/">
+                    <img src="../images/common/facebook.png" class="image"></img>
+                </a>
+            </div>
+
+            <div class="item3">
+                <a href="https://www.instagram.com/">
+                    <img src="../images/common/instagram.png" class="image"></img>
+                </a>
+            </div>
+
+            <div class="item4"><a href="https://twitter.com/">
+                    <img src="../images/common/twitter.png" class="image"></img>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
