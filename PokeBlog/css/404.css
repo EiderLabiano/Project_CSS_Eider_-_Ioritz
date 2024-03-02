@@ -8,6 +8,10 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
 
+a{
+    text-decoration: none;
+}
+
 /* Header */
 /* Header */
 /* Header */
@@ -16,10 +20,6 @@ div#header {
     position: sticky;
     top: 0px;
     z-index: 100;
-}
-
-a{
-    text-decoration: none;
 }
 
 div.TopRectangle {
@@ -243,13 +243,13 @@ div.bottomCircle {
 
 div.bottomRectangle {
     height: 100px;
+    width: 98.65%;
     border: 10px solid black;  
  
     background-color: white;
-    position: relative;
+    position: absolute;
 
     z-index: 100;
-    bottom: 0px;
 }
 
 img.bottomLogo {
@@ -526,6 +526,7 @@ img.topLogo {
         bottom: -10px;
         padding-right: 3%;
     }
+
 
     .mainbody{
         position: relative;
