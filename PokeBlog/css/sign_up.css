@@ -1,0 +1,589 @@
+body {
+    margin: 0%;
+    background-image: url(/IMAGES/background.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+/* Header */
+/* Header */
+
+div#header {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+div.TopRectangle {
+    height: 100px;
+    border: 10px solid black;
+
+    background-color: red;
+    position: absolute;
+}
+
+div.TopCircle {
+    width: 75px;
+    height: 75px;
+    border: 6px solid black;
+
+    border-radius: 50%;
+    background-color: white;
+    
+    position: absolute;
+    z-index: 101;
+
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label.TopSmallCircle {
+    width: 45px;
+    height: 45px;
+    border: 3px solid black;
+
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    z-index: 102;
+
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+label.TopSmallCircle:hover {
+    animation-name: null;
+}
+
+@keyframes menuButtonHover {
+    0% {
+        width: 75px;
+        height: 75px;
+    }
+
+    100% {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Menu */
+/* Menu */
+/* Menu */
+
+div.Menu {
+    background-color: #e0e0e0;
+    background-image: linear-gradient(#e0e0e0, #969799, #e0e0e0);
+    border: 5px solid black;
+    border-radius: 9px;
+    opacity: 0%;
+
+    position: absolute;
+    z-index: -10;
+    display: flex;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#toggle:checked~div.Menu {
+    animation-name: menuAnimation;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuAnimation {
+    0% {
+        top: 0%;
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        top: 165%;
+        opacity: 100%;
+    }
+}
+
+.visually-hidden {
+    opacity: 0%;
+    position: absolute;
+}
+
+/* SearchBar */
+/* SearchBar */
+/* SearchBar */
+
+.searchbar {
+    height: 30px;
+    width: 40%;
+    font-size: 20px;
+    border: 3px solid black;
+
+    background-color: rgb(241, 241, 241);
+    float: right;
+
+    border-radius: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.searchButton {
+    position: absolute;
+    opacity: 0%;
+}
+
+.searchButton:hover {
+    background-color: rgb(170, 165, 165);
+}
+
+/* Main content */
+/* Main content */
+/* Main content */
+
+div.information{
+            height: 70%;
+            width: 40%;
+            background-image: linear-gradient(lightblue, lightblue, lightgreen);
+            border: 10px solid black;
+            padding: 10%;
+            margin: auto;
+            color: black;
+            margin-top: 35%;
+            margin-bottom: 20%;
+        }
+        div.title{
+            text-align: center;
+        }
+        div.text{
+            text-align: justify;
+        }
+
+/* Link Buttons */
+/* Link Buttons */
+/* Link Buttons */
+
+.button {
+    width: 15%;
+    height: 30px;
+    border: 3px solid black;
+    font-size: 16px;
+
+    background-color: rgb(156, 156, 156);
+    border-radius: 10px;
+    text-align: center;
+    float: right;
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+    z-index: 101;
+}
+
+.menuButtons {
+    width: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    border: 3px solid black;         
+    margin: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+    border-radius: 10px;
+    text-align: center;
+    bottom: 100%;
+    float: right;
+    
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+    z-index: 101;
+}
+
+.menuButtons:nth-child(3) {
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 5px;
+    position: absolute;
+}
+
+.button:hover,
+.menuButtons:hover {
+    background-color: lightgray;
+}
+
+/* Footer */
+/* Footer */
+/* Footer */
+
+div.bottomCircle {
+    width: 75px;
+    height: 37.5px;
+    border: 10px solid black;
+    
+    background-color: lightgray;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+    border-bottom: 0;
+    rotate: 180deg;
+    position: absolute;
+    z-index: 50;
+    right: 50%;
+    transform: translate(-50%);
+    z-index: 101;
+}
+
+div.bottomRectangle {
+    height: 100px;
+    border: 10px solid black;  
+ 
+    background-color: white;
+    position: relative;
+
+    z-index: 100;
+    bottom: 0px;
+}
+
+img.bottomLogo {
+    max-height: 40px;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    transform: translate(+0%, -0%);
+}
+
+/* Social Media Links*/
+/* Social Media Links*/
+/* Social Media Links*/
+
+
+
+.socialGrid {
+    width: 30%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    left: 5%;
+    bottom: 5px;  
+}
+
+.image {
+    max-width: 35px;
+}
+
+.helpLinks {
+    float: right;
+    border-left: 0px solid black;
+    padding: 15px;
+    padding-left: 1%;
+    padding-right: 3%;
+    text-align: right;
+}
+
+.helpLinks p {
+    margin: 1px;
+    font-size: 15px;
+}
+
+/* Test*/
+
+@keyframes null {
+    
+}
+
+.topButtonContainer{  
+    float: right;
+    width: 80%;
+    border: 5px solid black;
+}
+
+.clearfloat{
+    clear: both;
+}
+
+img.topLogo {
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translate(+5%, -70%); 
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 600px) {
+    
+    body{
+        background-image: url(/IMAGES/background.jpg);
+    }
+
+    img.topLogo{
+        
+        height: 70px;
+        
+        transform: translate(+5%, -50%);
+    }
+
+    div.TopCircle {
+        width: 100px;
+        height: 100px;
+        border: 9px solid black;
+    }
+
+    label.TopSmallCircle {
+        width: 65px;
+        height: 65px;
+        border: 4px solid black;
+    }
+
+    .menuButtons:nth-child(3) {
+        position: relative;
+        width: 45px;
+    }
+
+    div.information{
+            height: 70%;
+            width: 40%;
+            background-image: linear-gradient(lightblue, lightgreen);
+            border: 10px solid black;
+            padding: 10%;
+            margin: auto;
+            color: black;
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+        div.title{
+            text-align: center;
+        }
+        div.text{
+            text-align: justify;
+        }
+        
+
+    div.bottomCircle {
+        width: 100px;
+        height: 50px;
+    }
+
+    .socialGrid {
+        width: 100%;
+        justify-content: center;
+        gap: 1%;
+        left: 0%;
+        bottom: 2px;   
+    }
+
+    .image {
+        max-width: 40px;
+    }
+
+    img.bottomLogo {
+        max-height: 80px;
+        left: 0%;
+        top: 50%;
+        transform: translate(+5%, -50%);
+    }
+
+}
+
+
+/* Desktop */
+
+@media only screen and (min-width: 1324px) {
+
+    body{
+        margin: 0%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-image: url(/IMAGES/background.jpg);
+    }
+    div.TopRectangle {
+        height: 100px;
+        border: 10px solid black;
+    }
+
+    img.topLogo{
+        height: 80px;
+        
+        transform: translate(+5%, -50%);
+    }
+
+    div.TopCircle {
+        width: 125px;
+        height: 125px;
+        border: 10px solid black;
+    }
+
+    label.TopSmallCircle {
+        width: 75px;
+        height: 75px;
+        border: 5px solid black;
+    }
+
+    label.TopSmallCircle:hover {
+        animation-name: menuButtonHover;
+        animation-duration: 0.1s;
+        animation-fill-mode: forwards;
+    }
+
+    .button {
+        width: 100px;
+        height: 50px;
+        border: 4px solid black;
+        font-size: 27px;
+    }
+
+    .searchButton {
+        height: 50px;
+        width: 50px;
+        background-color: lightgray;
+        float: right;
+        position: relative;
+        right: 10px;
+        opacity: 100%;
+
+        border: 4px solid black;
+        border-radius: 30%;
+
+        margin: 8px;
+    }
+
+    .searchbar {
+        height: 48px;
+        width: 20%;
+        font-size: 27px;
+        border: 4px solid black;
+    }
+
+    .clearfloat{
+        display: none;
+    }
+
+    .menuButtons {
+        width: 100px;
+        height: 50px;
+        border: 5px solid black;
+        margin: 20px;
+        font-size: 27px;
+    }
+
+    .menuButtons:nth-child(3) {
+        position: relative;
+        width: 100px;
+        height: 50px;
+        border: 5px solid black;
+        margin: 20px;
+        font-size: 27px;
+    }
+
+    div.information{
+            height: 70%;
+            width: 40%;
+            background-image: linear-gradient(lightblue, lightblue, lightgreen);
+            border: 10px solid black;
+            padding: 10%;
+            margin: auto;
+            color: black;
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+        div.title{
+            text-align: center;
+        }
+        div.text{
+            text-align: justify;
+        }
+        
+
+    @keyframes menuAnimation {
+        0% {
+            top: 0%;
+            opacity: 0%;
+        }
+
+        50% {
+            opacity: 50%;
+        }
+
+        100% {
+            top: 165%;
+            opacity: 100%;
+        }
+    }
+
+    div.bottomCircle {
+        width: 125px;
+        height: 62.5px;
+        border: 10px solid black;
+        border-bottom: 0;
+    }
+
+    div.bottomRectangle {
+        height: 125px;
+        border: 10px solid black;
+    }
+    
+    img.bottomLogo {
+        max-height: 100px;
+        left: 0%;
+        top: 50%;
+        transform: translate(+5%, -50%);
+    }
+
+    .helpLinks {
+        padding: 15px;
+        padding-left: 1%;
+        padding-right: 3%;
+    }
+
+    .helpLinks p {
+        margin: 6px;
+    }
+
+    .image {  
+        max-width: 70px;
+    }
+
+    .socialGrid {
+        justify-content:unset;
+        width: 300px;
+        display: grid;
+        position: relative;
+        gap: 10px;
+        float: right;
+        padding: 15px;
+        bottom: -10px;
+        padding-right: 3%;
+    }
+}
