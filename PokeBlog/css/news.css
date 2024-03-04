@@ -1,6 +1,6 @@
 body {
     margin: 0%;
-    background-image: url(../images/common/background_phone.jpg);
+    background-image: url(/IMAGES/background.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-attachment: fixed;
@@ -220,6 +220,23 @@ div.Menu {
     background-color: lightgray;
 }
 
+div.gallery {
+        margin-top: 20%;
+        margin-left: 28%;
+        float: auto;
+        width: 50%;
+        align-items: center;
+        border-radius: 8px;
+        flex-wrap: wrap;
+        
+    }
+
+    div.gallery img {
+        width: 100%; 
+        height: auto;
+        border-radius: 8px;
+    }
+
 /* Footer */
 /* Footer */
 /* Footer */
@@ -321,7 +338,7 @@ img.topLogo {
 @media only screen and (min-width: 600px) {
     
     body{
-        background-image: url(/Images/background_prairie_pokemon_screencapture_by_nemotrex_de8nlib-fullview.jpg);
+        background-image: url(/IMAGES/background.jpg);
     }
 
     img.topLogo{
@@ -348,14 +365,14 @@ img.topLogo {
         width: 45px;
     }
     div.gallery {
-        margin-top: 10%;
-        margin-left: 3%;
+        margin-top: 20%;
+        margin-left: 35%;
         float: auto;
         width: 30%;
         align-items: center;
         border-radius: 8px;
         flex-wrap: wrap;
-        margin: auto;
+        
     }
 
     div.gallery img {
@@ -401,7 +418,7 @@ img.topLogo {
         background-attachment: fixed;
         background-size: cover;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        background-image: url(/Images/background_prairie_pokemon_screencapture_by_nemotrex_de8nlib-fullview.jpg);
+        background-image: url(/IMAGES/background.jpg);
     }
     div.TopRectangle {
         height: 100px;
@@ -498,7 +515,7 @@ img.topLogo {
         }
     }
      
-    div.gallery1 {
+    div.gallery {
         margin-top: 10%;
         margin-left: 3%;
         float: left;
@@ -509,21 +526,8 @@ img.topLogo {
         border-radius: 8px;
     
     }
-    div.gallery2 {
-        margin-top: 10%;
-        margin-left: 3%;
-        float: left;
-        width: 25%;
-        /* display: flex; 
-        justify-content: center;
-        align-items: center; */
-        border-radius: 8px;
     
-    }
-    .main_div .clearfix{clear: both;}
-
-
-    div.gallery1 div.gallery2 img {
+    div.gallery img {
         width: 100%; 
         height: auto;
         border-radius: 8px;
