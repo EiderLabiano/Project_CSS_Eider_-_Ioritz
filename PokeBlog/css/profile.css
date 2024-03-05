@@ -1,14 +1,14 @@
 body {
     margin: 0%;
-    background-image: url(/IMAGES/0aab2738d4a0f1d456fba6ccdecc7ff7.jpg);
+    background-image: url(../images/0aab2738d4a0f1d456fba6ccdecc7ff7.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-attachment: fixed;
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-} 
+}
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -37,7 +37,7 @@ div.TopCircle {
 
     border-radius: 50%;
     background-color: white;
-    
+
     position: absolute;
     z-index: 101;
 
@@ -142,7 +142,7 @@ div.Menu {
     margin: 5px;
     display: flex;
     align-items: center;
-    
+
 
 }
 
@@ -159,29 +159,32 @@ div.Menu {
 /* Main content */
 /* Main content */
 
-div.information{
-            height: 70%;
-            width: 40%;
-            background-image: linear-gradient(white, red, white);
-            border: 10px solid black;
-            padding: 10%;
-            margin: auto;
-            color: black;
-            margin-top: 20%;
-            margin-bottom: 20%;
-        }
-        div.title{
-            text-align: center;
-        }
-        div.text{
-            text-align: justify;
-        }
-        div.image{
-           position: absolute;
-           top: 25%;
-           right: 75%;
-           max-width: 10px;
-        }
+div.information {
+    height: 70%;
+    width: 40%;
+    background-image: linear-gradient(white, red, white);
+    border: 10px solid black;
+    padding: 10%;
+    margin: auto;
+    color: black;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+div.title {
+    text-align: center;
+}
+
+div.text {
+    text-align: justify;
+}
+
+div.image {
+    position: absolute;
+    top: 25%;
+    right: 75%;
+    max-width: 10px;
+}
 
 /* Link Buttons */
 /* Link Buttons */
@@ -202,7 +205,7 @@ div.information{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
 
     z-index: 101;
@@ -213,7 +216,7 @@ div.information{
     padding-left: 10px;
     padding-right: 10px;
     height: 35px;
-    border: 3px solid black;         
+    border: 3px solid black;
     margin: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -223,13 +226,13 @@ div.information{
     text-align: center;
     bottom: 100%;
     float: right;
-    
+
     position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
 
     z-index: 101;
@@ -256,7 +259,7 @@ div.bottomCircle {
     width: 75px;
     height: 37.5px;
     border: 10px solid black;
-    
+
     background-color: lightgray;
     border-top-left-radius: 120px;
     border-top-right-radius: 120px;
@@ -271,8 +274,8 @@ div.bottomCircle {
 
 div.bottomRectangle {
     height: 100px;
-    border: 10px solid black;  
- 
+    border: 10px solid black;
+
     background-color: white;
     position: relative;
 
@@ -300,7 +303,7 @@ img.bottomLogo {
     grid-template-columns: auto auto auto;
     position: absolute;
     left: 5%;
-    bottom: 5px;  
+    bottom: 5px;
 }
 
 .image {
@@ -323,17 +326,15 @@ img.bottomLogo {
 
 /* Test*/
 
-@keyframes null {
-    
-}
+@keyframes null {}
 
-.topButtonContainer{  
+.topButtonContainer {
     float: right;
     width: 80%;
     border: 5px solid black;
 }
 
-.clearfloat{
+.clearfloat {
     clear: both;
 }
 
@@ -341,21 +342,23 @@ img.topLogo {
     height: 60px;
     position: absolute;
     top: 50%;
-    transform: translate(+5%, -70%); 
+    transform: translate(+5%, -70%);
+}
+
+div.information {
+    padding-bottom: 20%;
 }
 
 /* Tablet */
 
 @media only screen and (min-width: 600px) {
-    
-    body{
-        background-image: url(/IMAGES/0aab2738d4a0f1d456fba6ccdecc7ff7.jpg);
-    }
 
-    img.topLogo{
-        
+    
+
+    img.topLogo {
+
         height: 70px;
-        
+
         transform: translate(+5%, -50%);
     }
 
@@ -376,30 +379,32 @@ img.topLogo {
         width: 45px;
     }
 
-    div.information{
-            height: 70%;
-            width: 40%;
-            background-image: linear-gradient(white, red, white);
-            border: 10px solid black;
-            padding: 10%;
-            margin: auto;
-            color: black;
-            margin-top: 20%;
-            margin-bottom: 20%;
-        }
-        div.title{
-            text-align: center;
-        }
-        div.text{
-            text-align: justify;
-        }
-        
-        div.image{
-           position: absolute;
-           top: 28%;
-           right: 77%;
-           max-width: 20px;
-        }
+    div.information {
+        height: 70%;
+        width: 40%;
+        background-image: linear-gradient(white, red, white);
+        border: 10px solid black;
+        padding: 10%;
+        margin: auto;
+        color: black;
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
+    div.title {
+        text-align: center;
+    }
+
+    div.text {
+        text-align: justify;
+    }
+
+    div.image {
+        position: absolute;
+        top: 28%;
+        right: 77%;
+        max-width: 20px;
+    }
 
     div.bottomCircle {
         width: 100px;
@@ -411,7 +416,7 @@ img.topLogo {
         justify-content: center;
         gap: 1%;
         left: 0%;
-        bottom: 2px;   
+        bottom: 2px;
     }
 
     .image {
@@ -432,22 +437,23 @@ img.topLogo {
 
 @media only screen and (min-width: 1324px) {
 
-    body{
+    body {
         margin: 0%;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        background-image: url(/IMAGES/0aab2738d4a0f1d456fba6ccdecc7ff7.jpg);
+    
     }
+
     div.TopRectangle {
         height: 100px;
         border: 10px solid black;
     }
 
-    img.topLogo{
+    img.topLogo {
         height: 80px;
-        
+
         transform: translate(+5%, -50%);
     }
 
@@ -498,7 +504,7 @@ img.topLogo {
         border: 4px solid black;
     }
 
-    .clearfloat{
+    .clearfloat {
         display: none;
     }
 
@@ -519,30 +525,32 @@ img.topLogo {
         font-size: 27px;
     }
 
-    div.information{
-            height: 70%;
-            width: 40%;
-            background-image: linear-gradient(white, red, white);
-            border: 10px solid black;
-            padding: 10%;
-            margin: auto;
-            color: black;
-            margin-top: 20%;
-            margin-bottom: 20%;
-        }
-        div.title{
-            text-align: center;
-        }
-        div.text{
-            text-align: justify;
-        }
-        
-        div.image{
-           position: absolute;
-           top: 60%;
-           right: 76%;
-           max-width: 80px;
-        }
+    div.information {
+        height: 70%;
+        width: 40%;
+        background-image: linear-gradient(white, red, white);
+        border: 10px solid black;
+        padding: 10%;
+        margin: auto;
+        color: black;
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+
+    div.title {
+        text-align: center;
+    }
+
+    div.text {
+        text-align: justify;
+    }
+
+    div.image {
+        position: absolute;
+        top: 60%;
+        right: 76%;
+        max-width: 80px;
+    }
 
     @keyframes menuAnimation {
         0% {
@@ -571,7 +579,7 @@ img.topLogo {
         height: 125px;
         border: 10px solid black;
     }
-    
+
     img.bottomLogo {
         max-height: 100px;
         left: 0%;
@@ -589,12 +597,12 @@ img.topLogo {
         margin: 6px;
     }
 
-    .image {  
+    .image {
         max-width: 70px;
     }
 
     .socialGrid {
-        justify-content:unset;
+        justify-content: unset;
         width: 300px;
         display: grid;
         position: relative;

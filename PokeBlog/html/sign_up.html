@@ -3,15 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <style>
-    </style>
+    <title>Pokéblog | Sign Up</title>
+    <link rel="stylesheet" href="../css/sign_up.css">
+    <link rel="icon" type="image/x-icon" href="../images/common/favicon.png">
 </head>
 <body>
-        <div class="TopRectangle" id="header">
+    <div class="TopRectangle" id="header">
+        <a href="index.html">
+            <img src="../images/common/logo.png" class="topLogo"></img>
+        </a>
+        <div class="TopCircle"></div>
 
-            <div class="TopCircle" ></div>
-            <label for="toggle" class="TopSmallCircle"></label>
+        <input type="checkbox" id="toggle" class="visually-hidden">
+        <label for="toggle" class="TopSmallCircle"></label>
+        <div class="TopCircle"></div>
+
+        <input type="checkbox" id="toggle" class="visually-hidden">
+        <label for="toggle" class="TopSmallCircle"></label>
+
+        <form action="404.html">
+            <button type="submit" class="searchButton">
+                <img src="../images/common/lupa.png" style="height: 30px;"></img>
+            </button>
+            <input type="text" placeholder="Search..." name="search" class="searchbar">
+        </form>
+        <div class="clearfloat"></div>
+        <div>
+            <div class="button">
+                <a href="sign_up.html" style="color: black;">Sign Up</a>
+            </div>
+            <div class="button">
+                <a href="log_in.html" style="color: black;">Log In</a>
+            </div>
+        </div>
+
+
+        <div class="Menu">
+            <div class="menuButtons" style="background-image: linear-gradient(red, red,  #a82f14);">
+                <a href="news.html" style="color: black;">News</a>
+            </div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#61a93b, #61a93b,  #4c713b);">
+                <a href="profile.html" style="color: black;">Profile</a>
+            </div>
+
+            <div class="menuButtons" style="opacity: 0%;">Nothing on here, hehe</div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#e09829, #e09829,  #8c663f);">
+                <a href="pokedex.html" style="color: black;">Pokédex</a>
+            </div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#2491ca, #2491ca,  #425772);">
+                <a href="https://www.pokemon.com" style="color: black;">Oficial Site</a>
+            </div>
+        </div>
+
+
+
+    </div>
     
     <form action="index.html">
             <div class="information">
@@ -46,18 +95,18 @@
                 <div></div>
                 <br>
                 <div>
-                    <label for=""><b><u>Choose your Pokemon traveler (just one) </u></b></label>
+                    <label for=""><b><u>Choose your starter Pokémon (just one) </u></b></label>
                     <br>
                     <table>
                         <tr>
-                            <th><img src="/Images/Bulbasaur.png" width="80px"></th>
-                            <th><img src="/Images/800px-Charmander.png" width="80"></th>
-                            <th><img src="/IMAGES/Squirtle.png.webp" width="80px"></th>
+                            <th><img src="../images/Bulbasaur.png" width="80px"></th>
+                            <th><img src="../images/800px-Charmander.png" width="80px"></th>
+                            <th><img src="../images/Squirtle.png" width="80px"></th>
                         </tr>
                         <tr>
-                            <th><input type="radio"></th>
-                            <th><input type="radio"></th>
-                            <th><input type="radio"></th>
+                            <th><input type="radio" id="starter" name="starter"></th>
+                            <th><input type="radio" id="starter" name="starter"></th>
+                            <th><input type="radio" id="starter" name="starter"></th>
                         </tr>
                     </table>
                 </div>
@@ -66,7 +115,40 @@
             </div>
     </form>
     
-    <div class="bottomCircle"></div>
-    <div class="bottomRectangle"></div>
+    <div class="bottomRectangle">
+
+        <div class="bottomCircle"></div>
+
+        <a href="index.html">
+            <img src="../images/common/logo.png" class="bottomLogo"></img>
+        </a>
+
+        <div class="helpLinks">
+            <p><a href="info.html" style="color: black;">About PokéBlog</a></p>
+            <p><a href="info.html#About" style="color: black;">FAQ</a></p>
+            <p><a href="info.html#FAQ" style="color: black;">Terms and Conditions</a></p>
+            <p><a href="info.html#TaC" style="color: black;">Contact us</a></p>
+        </div>
+
+        <div class="socialGrid">
+
+            <div class="item2">
+                <a href="https://www.facebook.com/">
+                    <img src="../images/common/facebook.png" class="image"></img>
+                </a>
+            </div>
+
+            <div class="item3">
+                <a href="https://www.instagram.com/">
+                    <img src="../images/common/instagram.png" class="image"></img>
+                </a>
+            </div>
+
+            <div class="item4"><a href="https://twitter.com/">
+                    <img src="../images/common/twitter.png" class="image"></img>
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

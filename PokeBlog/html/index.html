@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokéblog | Main Page</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/x-icon" href="../images/common/favicon.png">
+    <style>
+        .mainContainer {
+            font-size: 60%;
+            width: 80%;
+            margin: auto;
+            padding: 60px;
+        }
+
+        .topBox {
+            background-color: white;
+            border-radius: 20px;
+            margin: 2%;
+            padding: 1%;
+            position: relative;
+            margin: auto;
+            margin-top: 10%;
+            text-align: center;
+            width: 53%;
+        }
+
+
+
+        .post {
+            width: 70%;
+            margin: auto;
+            height: auto;
+
+            border-radius: 20px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+
+            margin-bottom: 20px;
+        }
+
+        .corner {
+            width: 30%;
+            padding: 2%;
+            padding-right: 8%;
+        }
+
+        .content {
+            width: auto;
+            height: auto;
+            padding: 5%;
+            padding-bottom: 0%;
+        }
+
+        .comment {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            float: right;
+        }
+
+        .comment2 {
+            text-align: center;
+            width: 80%;
+            height: auto;
+            float: right;
+        }
+
+        .textComment {
+            width: 50%;
+
+            position: relative;
+            text-align: right;
+            line-height: 50px;
+            align-items: center;
+            margin-top: 5%;
+            padding-right: 5%;
+            float: right;
+            font-size: 80%;
+        }
+
+        p.textComment {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+
+
+        .icons {
+            height: auto;
+            width: auto;
+            padding-bottom: 15%;
+
+        }
+
+        .icon {
+            padding: 5px;
+
+
+            float: right;
+
+            height: 7.5%;
+            width: 7.5%;
+        }
+
+        #iconHover {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        p.icon {
+            margin-top: 1%;
+
+            padding-right: 5%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+
+            height: 7.5%;
+            width: auto;
+
+            font-size: 110%;
+        }
+
+
+
+
+
+        img.icon:hover {
+            display: none;
+        }
+
+        img.icon:hover~img#iconHover {
+            display: inline;
+            position: relative;
+        }
+
+
+
+        .pfpBox {
+            display: flex;
+        }
+
+        .pfpBox p {
+
+            font-size: 110%;
+        }
+
+        .pfpBoxComment {
+            width: 30%;
+            display: flex;
+            float: left;
+        }
+
+        .pfp {
+
+            border-radius: 100%;
+            margin: 10px;
+            height: 50%;
+            width: 50%;
+            border: 1px solid gray;
+        }
+
+        .pfpComment {
+
+            border-radius: 100%;
+            margin: 10px;
+            height: 40%;
+            width: 40%;
+            border: 1px solid gray;
+        }
+
+        .fav_pokemon {
+            margin: 10px;
+            width: 100%;
+            height: 100%;
+        }
+
+        hr {
+            width: 95%;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .mainContainer {
+                font-size: 70%;
+            }
+
+            .topBox {
+                align-items: center;
+                background-color: white;
+                border-radius: 20px;
+
+                margin-top: 2%;
+                padding: 1%;
+
+                width: 55%;
+            }
+        }
+
+        @media only screen and (min-width: 1324px) {
+            .mainContainer {
+                font-size: 100%;
+                padding-top: 120px;
+            }
+
+            .topBox {
+                background-color: white;
+                border-radius: 20px;
+                margin: 2%;
+                padding: 1%;
+                position: absolute;
+                width: 15%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="TopRectangle" id="header">
+        <a href="index.html">
+            <img src="../images/common/logo.png" class="topLogo"></img>
+        </a>
+
+        <div class="TopCircle"></div>
+
+        <input type="checkbox" id="toggle" class="visually-hidden">
+        <label for="toggle" class="TopSmallCircle"></label>
+
+        <form action="404.html">
+            <button type="submit" class="searchButton">
+                <img src="../images/common/lupa.png" style="height: 30px;"></img>
+            </button>
+            <input type="text" placeholder="Search..." name="search" class="searchbar">
+        </form>
+        <div class="clearfloat"></div>
+        <div>
+            <div class="button">
+                <a href="sign_up.html" style="color: black;">Sign Up</a>
+            </div>
+            <div class="button">
+                <a href="log_in.html" style="color: black;">Log In</a>
+            </div>
+        </div>
+
+
+        <div class="Menu">
+            <div class="menuButtons" style="background-image: linear-gradient(red, red,  #a82f14);">
+                <a href="news.html" style="color: black;">News</a>
+            </div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#61a93b, #61a93b,  #4c713b);">
+                <a href="profile.html" style="color: black;">Profile</a>
+            </div>
+
+            <div class="menuButtons" style="opacity: 0%;">Nothing on here, hehe</div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#e09829, #e09829,  #8c663f);">
+                <a href="pokedex.html" style="color: black;">Pokédex</a>
+            </div>
+
+            <div class="menuButtons" style="background-image: linear-gradient(#2491ca, #2491ca,  #425772);">
+                <a href="https://www.pokemon.com" style="color: black;">Oficial Site</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="topBox">
+        <h1>Welcome to Pokéblog!</h1>
+        <p>Here you can share all your adventures, findigns, memes and more! Sign up or Log in to start posting!</p>
+
+        <p>Also, be sure to check our other segments like our Pokédex and news section!</p>
+
+    </div>
+
+    <div class="mainContainer">
+
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/oak.jpg">
+                    <p>Prof. Oak</p>
+                </div>
+                <div class="pokemon">
+
+                    <img class="fav_pokemon" src="../images/tauros.webp">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>There's a time and place for everything, but not now.</p>
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">0</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">2</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">13</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/lylia.jpg">
+                    <p>Lylia</p>
+                </div>
+                <div>
+
+                    <img class="fav_pokemon" src="../images/cosmog.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>A day in the beach! <3< /p>
+                            <img src="../images/beach.jpg" width="100%">
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">2</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">3</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">176</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/lana.jpg">
+                        <p>Lana</p>
+                    </div>
+                    <p class="textComment">Your brother is screaming in the back</p>
+
+                    <div style="clear:left;"></div>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/lylia.jpg">
+                        <p>Lylia</p>
+                    </div>
+                    <p class="textComment">This ain't about him</p>
+                </div>
+
+                <hr style="opacity: 0%;">
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/ash.png">
+                    <p>Ash Ketchup</p>
+                </div>
+                <div class="pokemon">
+
+                    <img class="fav_pokemon" src="../images/pikachu.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>Wtf they arrested my boi what did he do (also wtf was he doing in spain) #news </p>
+                    <img src="../images/jail.jpg" width="100%">
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">0</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">1</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">759</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/hilda.jpg">
+                    <p>Hilda</p>
+                </div>
+                <div class="pokemon">
+
+                    <img class="fav_pokemon" src="../images/tepig.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>It's Chewsday innit? Happy Chewsday!</p>
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">1</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">17</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">491</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/gloria.png">
+                        <p>Gloria</p>
+                    </div>
+                    <p class="textComment">YEAH I'LL CHEW YER ARMS OFF YA DAFT CU- </p>
+                </div>
+
+                <hr>
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/chano.jpg">
+                    <p>Joey</p>
+                </div>
+                <div class="pokemon">
+
+                    <img class="fav_pokemon" src="../images/rattata.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>My rattata is the best in the world! If you don't belive it, come test his strength!</p>
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">0</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">0</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">2</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+
+                <hr>
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/wally.jpg">
+                    <p>Wally</p>
+                </div>
+                <div>
+
+                    <img class="fav_pokemon" src="../images/ralts.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>Remember when some gods suddenly just appeared and began a cataclysm because, dunno, land and
+                        water?</p>
+                    <img src="../images/wheather_trio.png" width="100%">
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">4</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">2</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">214</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/zinnia.jpg">
+                        <p>Zinnia</p>
+                    </div>
+                    <p class="textComment">Yeah, and then that meteorite almost destroyed the planet</p>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/may.png">
+                        <p>May</p>
+                    </div>
+                    <p class="textComment">Yeah I remember, I was there</p>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/rayquaza-mega.png">
+                        <p>Mega-Rayquaza</p>
+                    </div>
+                    <p class="textComment">Yeah</p>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/deoxys.png">
+                        <p>Deoxys</p>
+                    </div>
+                    <p class="textComment">Fuck you</p>
+                </div>
+
+                <hr style="opacity: 0%;">
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/blue.png">
+                    <p>Blue</p>
+                </div>
+                <div>
+
+                    <img class="fav_pokemon" src="../images/Squirtle.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>Pokémon Blue >>>>>>>> every other version</p>
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">4</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">127</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">371</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/red.jpg">
+                        <p>Red</p>
+                    </div>
+                    <p class="textComment">Shut up. Red version over everything else</p>
+
+                    <div style="clear:left;"></div>
+                </div>
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/green.png">
+                        <p>Green</p>
+                    </div>
+                    <p class="textComment">I like Pokémon Green!</p>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/blue.png">
+                        <p>Blue</p>
+                    </div>
+                    <p class="textComment">Shut up</p>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/ash.png">
+                        <p>Ash Ketchup</p>
+                    </div>
+                    <p class="textComment">Shut up</p>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/red.jpg">
+                        <p>Red</p>
+                    </div>
+                    <p class="textComment">Shut up</p>
+                </div>
+
+
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/ash.png">
+                        <p>Ash Ketchup</p>
+                    </div>
+                    <p class="textComment">Pokémon Yellow is the objective superior</p>
+
+                    <div style="clear:left;"></div>
+                </div>
+
+                <hr style="opacity: 0%;">
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/zygarde.png">
+                    <p>Zygarde</p>
+                </div>
+                <div class="pokemon">
+
+                    <img class="fav_pokemon" src="../images/zygarde.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>I lived bitches</p>
+                    <img src="../images/za.png" width="100%">
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">0</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">6</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">1823</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+
+                <hr>
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="corner">
+                <div class="pfpBox">
+                    <img class="pfp" src="../images/ethan.png">
+                    <p>Ethan</p>
+                </div>
+                <div>
+
+                    <img class="fav_pokemon" src="../images/cyndaquil.png">
+
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <div class="content">
+                    <p>Hey, so I was exploring and I stumbled across this Totodile.
+                        Someone knows why it has that coloration? Is it sick or something? (also, cool pick I took)</p>
+                    <img src="../images/shiny.jpg" width="100%">
+                </div>
+                <div class="icons">
+                    <div>
+                        <p class="icon">2</p>
+                        <img class="icon" src="../images/comment.png" alt="Comment">
+                        <img class="icon" id="iconHover" src="../images/comment_hover.png" alt="Comment">
+
+                    </div>
+                    <div>
+                        <p class="icon">0</p>
+                        <img class="icon" src="../images/dislike.png" alt="Dislike">
+                        <img class="icon" id="iconHover" src="../images/dislike_hover.png" alt="Dislike">
+                    </div>
+                    <div>
+                        <p class="icon">26</p>
+                        <img class="icon" src="../images/like.png" alt="Like">
+                        <img class="icon" id="iconHover" src="../images/like_hover.png" alt="Like">
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="comment">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/silver.png">
+                        <p>Silver</p>
+                    </div>
+                    <p class="textComment">Yeah its very sick and its very painful, you should defeat it to end its
+                        suffering</p>
+
+                    <div style="clear:left;"></div>
+                </div>
+
+                <hr>
+
+                <div class="comment2">
+                    <div class="pfpBoxComment" style="float: left;">
+                        <img class="pfpComment" src="../images/ethan.png">
+                        <p>Ethan</p>
+                    </div>
+                    <p class="textComment">OKay I just fainted it, thanks for letting me know</p>
+                </div>
+
+                <hr style="opacity: 0%;">
+
+            </div>
+
+        </div>
+
+        <div class="post">
+            <p style="margin: auto; padding: 5%;">There seems to be an issue loading posts... Try again later!</p>
+            
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="bottomCircle"></div>
+
+    <div class="bottomRectangle">
+
+        <a href="index.html">
+            <img src="../images/common/logo.png" class="bottomLogo"></img>
+        </a>
+
+        <div class="helpLinks">
+            <p><a href="info.html" style="color: black;">About PokéBlog</a></p>
+            <p><a href="info.html#About" style="color: black;">FAQ</a></p>
+            <p><a href="info.html#FAQ" style="color: black;">Terms and Conditions</a></p>
+            <p><a href="info.html#TaC" style="color: black;">Contact us</a></p>
+        </div>
+
+        <div class="socialGrid">
+
+            <div class="item2">
+                <a href="https://www.facebook.com/">
+                    <img src="../images/common/facebook.png" class="image"></img>
+                </a>
+            </div>
+
+            <div class="item3">
+                <a href="https://www.instagram.com/">
+                    <img src="../images/common/instagram.png" class="image"></img>
+                </a>
+            </div>
+
+            <div class="item4"><a href="https://twitter.com/">
+                    <img src="../images/common/twitter.png" class="image"></img>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
